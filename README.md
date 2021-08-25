@@ -15,4 +15,5 @@ Date:   Wed Aug 25 15:26:27 2021 +0000
           2.2.2.2 dev veth2 lladdr 02:24:1a:6f:92:39 PERMANENT
           ping -f 2.2.2.2 -I veth2
 
-
+    4. attach xdp on veth1 as follows
+       ip link sset dev veth1 xdp obj ebp_policer.o sec ebp_policer
